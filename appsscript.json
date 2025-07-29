@@ -1,0 +1,21 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {
+    "enabledAdvancedServices": [{
+      "userSymbol": "Sheets",
+      "serviceId": "sheets",
+      "version": "v4"
+    }]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "sheets": {
+    "macros": [{
+      "menuName": "EnterToDatabase",
+      "functionName": "EnterToDatabase"
+    }, {
+      "menuName": "ClearScreening",
+      "functionName": "ClearScreening"
+    }]
+  }
+}

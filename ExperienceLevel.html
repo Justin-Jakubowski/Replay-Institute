@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <form id="userForm">
+      <label>First Name:</label><br>
+      <input type="text" name="firstName" required><br><br>
+
+      <label>Last Name:</label><br>
+      <input type="text" name="lastName" required><br><br>
+
+      <label>Education Level:</label><br>
+      <input type="radio" name="educationLevel" value="High School" required> High School<br>
+      <input type="radio" name="educationLevel" value="College"> College<br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      document.getElementById("userForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const formData = Object.fromEntries(new FormData(this));
+        google.script.run
+          .withSuccessHandler(msg => {
+            alert(msg);
+            google.script.host.close();
+          })
+          .processForm(formData);
+      });
+    </script>
+  </body>
+</html>
