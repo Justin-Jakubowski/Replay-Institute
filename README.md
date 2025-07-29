@@ -49,5 +49,11 @@ A custom dropdown menu provides staff with **three automated actions**:
 - **Google Apps Script Editor** (via Google Sheets)
 - Git + GitHub used only for archiving code using [`clasp`](https://github.com/google/clasp)
 
-## 📁 Project Structure
+## 🔒 Important Notes
+
+- To keep this repository clear and focused, some supporting files—such as the HTML interface files and `.clasp.json` configuration—have been intentionally excluded.
+- The main purpose is to highlight the core Apps Script (macro) code that drives the project’s functionality.
+- This repo serves as an archival and demonstration resource. For live usage or further development, clone the repo and link it to your own Apps Script project using `clasp`.
+
+
 
