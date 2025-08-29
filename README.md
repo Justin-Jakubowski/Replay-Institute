@@ -1,103 +1,101 @@
-⚾ Replay Institute - Google Sheets Screening Automation
+Nice — adding a **Detailed File Overview** to your Replay Institute project README will make it much clearer for readers (and for future you). Since you’ve already listed the main files, we can structure it similarly to the Plannerly README, with inline links for easy navigation once it’s on GitHub.
 
-This repository contains the Apps Script code used to automate a screening process for Replay Baseball Institute.
+Here’s the improved README with the new section:
+
+---
+
+# ⚾ Replay Institute - Google Sheets Screening Automation
+
+This repository contains the **Apps Script code** used to automate a screening process for **Replay Baseball Institute**.
 The system is built on Google Sheets and designed to help staff efficiently evaluate new members of their program based on key athletic metrics.
 
-📌 Project Overview
+---
+
+## 📌 Project Overview
 
 Replay Baseball Institute conducts athletic screenings for potential new members. These screenings measure:
 
-Mobility
-
-Strength
-
-Power
-
-Rotation
-
-Arm strength and health
+* Mobility
+* Strength
+* Power
+* Rotation
+* Arm strength and health
 
 This project streamlines the data entry and reporting process by adding custom functionality to Google Sheets via a custom dropdown menu. The result is a more efficient, automated experience for staff during evaluations.
 
-⚙️ Key Features
+---
 
-A custom dropdown menu provides staff with three automated actions:
+## ⚙️ Key Features
 
-1. Add to Database
+A custom dropdown menu provides staff with **three automated actions**:
 
-After a screening is completed, staff select this option.
+### 1. **Add to Database**
 
-They're prompted to enter the athlete's first and last name.
+* After a screening is completed, staff select this option.
+* They're prompted to enter the athlete's **first and last name**.
+* All screening data is then automatically transferred to a master database under the athlete’s name.
+* ✅ Eliminates the need for manual data entry into the database.
 
-All screening data is then automatically transferred to a master database under the athlete’s name.
+### 2. **Clear Screening Sheet**
 
-✅ Eliminates the need for manual data entry into the database.
+* Used immediately after a player's data has been stored.
+* This function clears all fields in the screening sheet, resetting it for the next athlete.
+* ✅ Saves time by avoiding manual clearing.
 
-2. Clear Screening Sheet
+### 3. **Generate Slide for Player**
 
-Used immediately after a player's data has been stored.
+* Staff enter a player's first and last name to retrieve stored screening results.
+* The system:
 
-This function clears all fields in the screening sheet, resetting it for the next athlete.
+  * Locates the player's data in the database
+  * Creates a **copy of a template slide** in Google Slides
+  * Automatically fills in the copied slide with the player's screening results
+* ✅ Provides a professional, visual report for communication or internal use.
 
-✅ Saves time by avoiding manual clearing.
+---
 
-3. Generate Slide for Player
+## 🧰 Tech Stack
 
-Staff enter a player's first and last name to retrieve stored screening results.
+* **Google Apps Script**
+* **Google Sheets**
+* **Google Slides (via Apps Script)**
+* **HTML/CSS (for custom UI prompts)**
 
-The system:
+---
 
-Locates the player's data in the database
+## 🛠️ Development Environment
 
-Creates a copy of a template slide in Google Slides
+* **Google Apps Script Editor** (via Google Sheets)
+* Git + GitHub used only for archiving code using [`clasp`](https://github.com/google/clasp)
 
-Automatically fills in the copied slide with the player's screening results
+---
 
-✅ Provides a professional, visual report for communication or internal use.
+## 📖 Detailed File Overview
 
-🧰 Tech Stack
+* **[`Macros.js`](Macros.js)**
+  Contains all the **Google Apps Script (JavaScript) functions** that power the automation.
 
-Google Apps Script
+  * Implements the custom dropdown menu
+  * Defines logic for adding data to the database, clearing sheets, and generating slides
 
-Google Sheets
+* **[`Player_Development_Program.xlsx`](Player_Development_Program.xlsx)**
+  Excel file that contains:
 
-Google Slides (via Apps Script)
+  * **Screening sheet** – where staff enter athlete results
+  * **Database** – master record of all athlete screening data
 
-HTML/CSS (for custom UI prompts)
+* **`Slides/`** *(folder)*
+  Contains the **Google Slides template** used for generating player profiles.
 
-🛠️ Development Environment
+  * A copy of this template is automatically filled with athlete data each time the "Generate Slide" action is triggered
 
-Google Apps Script Editor (via Google Sheets)
+---
 
-Git + GitHub used only for archiving code using clasp
+## 🔒 Important Notes
 
-📖 Detailed File Overview
+* To keep this repository clear and focused, some supporting files—such as the HTML interface files and `.clasp.json` configuration—have been intentionally excluded.
+* The main purpose is to highlight the **core Apps Script (macro) code** that drives the project’s functionality.
+* This repo serves as an archival and demonstration resource. For live usage or further development, clone the repo and link it to your own Apps Script project using `clasp`.
 
-Macros.js
+---
 
-Contains all the Google Apps Script (JavaScript) functions that power the automation.
-
-Implements the custom dropdown menu
-
-Defines logic for adding data to the database, clearing sheets, and generating slides
-
-Player_Development_Program.xlsx
-
-Excel file that contains:
-
-Screening sheet – where staff enter athlete results
-
-Database – master record of all athlete screening data
-
-Slides/ (folder)
-Contains the Google Slides template used for generating player profiles.
-
-A copy of this template is automatically filled with athlete data each time the "Generate Slide" action is triggered
-
-🔒 Important Notes
-
-To keep this repository clear and focused, some supporting files—such as the HTML interface files and .clasp.json configuration—have been intentionally excluded.
-
-The main purpose is to highlight the core Apps Script (macro) code that drives the project’s functionality.
-
-This repo serves as an archival and demonstration resource. For live usage or further development, clone the repo and link it to your own Apps Script project using clasp.
